@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frío Motriz — Aire Acondicionado Automotriz</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- NAV (fondo blanco, letras oscuras) -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="logo-bars"><span></span><span></span><span></span><span></span></div>
+    <div class="logo-words"><span class="l1">FRÍO</span><span class="l2"> MOTRIZ</span><span class="l3">Aire Acondicionado Automotriz</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" data-slide="0" class="active">Inicio</a></li>
+    <li><a href="#" data-slide="1">Servicios</a></li>
+    <li><a href="#" data-slide="3">Nosotros</a></li>
+    <li><a href="#" data-slide="4">Testimonios</a></li>
+    <li><a href="#" data-slide="6">Ubicación</a></li>
+    <li><a href="#" data-slide="7">Contacto</a></li>
+  </ul>
+  <a class="nav-wa" href="https://wa.me/593958622828" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+  </a>
+</nav>
+
+<!-- DOT NAV -->
+
+<a class="wa-float" href="https://wa.me/593958622828" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- FULLPAGE -->
+<div id="fp">
+
+  <!-- S1 HERO — fog izquierda + fotos derecha + brand bar abajo dentro del slide -->
+  <section class="fp-slide" id="s-hero">
+    <div class="hero-top">
+      <!-- fondo vanta ocupa todo hero-top -->
+      <div id="vanta-bg"></div>
+      <div class="ice-wrap" id="ice-wrap"></div>
+
+      <!-- contenido izquierdo sobre el fog -->
+      <div class="hero-l">
+        <p class="hero-eyebrow">Aire Acondicionado Automotriz</p>
+        <h1 class="hero-title">EXPERTOS<br>EN ENFRIAR<br><span class="hl">SOLUCIONES</span></h1>
+        <p class="hero-desc">Diagnóstico, reparación, recarga e instalación de sistemas de A/C automotriz. Resultados garantizados el mismo día.</p>
+        <div class="hero-btns">
+          <a class="btn-wa-hero" href="https://wa.me/593958622828" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Escríbenos por WhatsApp
+          </a>
+          <a class="btn-serv js-go" data-slide="1">Ver servicios ↓</a>
+        </div>
+      </div>
+
+      <!-- fotos apiladas derecha — sin línea, fundidas con gradiente -->
+      <div class="hero-r">
+        <div class="hero-r-grid">
+          <!-- REEMPLAZA con tus fotos reales -->
+          <img class="hero-r-img" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=900&q=80" alt="Trabajo A/C">
+          <img class="hero-r-img" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=80" alt="Motor A/C">
+        </div>
+      </div>
+
+      <div class="scroll-cue"><span>Scroll</span><div class="sc-line"></div></div>
+    </div>
+
+    <!-- BRAND BAR — parte de baja del slide hero, debajo de las fotos y el fog -->
+    <div class="brand-bar">
+      <div class="b-track">
+        <div class="b-item">Toyota</div><div class="b-sep">·</div>
+        <div class="b-item">Chevrolet</div><div class="b-sep">·</div>
+        <div class="b-item">Hyundai</div><div class="b-sep">·</div>
+        <div class="b-item">Kia</div><div class="b-sep">·</div>
+        <div class="b-item">Mazda</div><div class="b-sep">·</div>
+        <div class="b-item">Nissan</div><div class="b-sep">·</div>
+        <div class="b-item">Ford</div><div class="b-sep">·</div>
+        <div class="b-item">Volkswagen</div><div class="b-sep">·</div>
+        <div class="b-item">Honda</div><div class="b-sep">·</div>
+        <div class="b-item">Mitsubishi</div><div class="b-sep">·</div>
+        <div class="b-item">Caterpillar</div><div class="b-sep">·</div>
+        <div class="b-item">John Deere</div><div class="b-sep">·</div>
+        <div class="b-item">Subaru</div><div class="b-sep">·</div>
+        <div class="b-item">Suzuki</div><div class="b-sep">·</div>
+        <div class="b-item">Hino</div><div class="b-sep">·</div>
+        <!-- dup -->
+        <div class="b-item">Toyota</div><div class="b-sep">·</div>
+        <div class="b-item">Chevrolet</div><div class="b-sep">·</div>
+        <div class="b-item">Hyundai</div><div class="b-sep">·</div>
+        <div class="b-item">Kia</div><div class="b-sep">·</div>
+        <div class="b-item">Mazda</div><div class="b-sep">·</div>
+        <div class="b-item">Nissan</div><div class="b-sep">·</div>
+        <div class="b-item">Ford</div><div class="b-sep">·</div>
+        <div class="b-item">Volkswagen</div><div class="b-sep">·</div>
+        <div class="b-item">Honda</div><div class="b-sep">·</div>
+        <div class="b-item">Mitsubishi</div><div class="b-sep">·</div>
+        <div class="b-item">Caterpillar</div><div class="b-sep">·</div>
+        <div class="b-item">John Deere</div><div class="b-sep">·</div>
+        <div class="b-item">Subaru</div><div class="b-sep">·</div>
+        <div class="b-item">Suzuki</div><div class="b-sep">·</div>
+        <div class="b-item">Hino</div><div class="b-sep">·</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2 SERVICIOS -->
+  <section class="fp-slide" id="s-serv">
+    <div class="serv-head">
+      <span class="s-lbl">Lo que hacemos</span>
+      <h2 class="s-ttl">NUESTROS <em>SERVICIOS</em></h2>
+      <div class="s-div"></div>
+    </div>
+    <div class="serv-grid">
+      <div class="sc"><div class="sc-img-wrap"><img class="sc-img" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=700&q=80" alt=""></div><div class="sc-body"><span class="sc-num">— 01</span><div class="sc-name">Soldadura en Aluminio</div><div class="sc-desc">Soldadura especializada en componentes del sistema A/C.</div></div></div>
+      <div class="sc"><div class="sc-img-wrap"><img class="sc-img" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=700&q=80" alt=""></div><div class="sc-body"><span class="sc-num">— 02</span><div class="sc-name">Reparación de Compresores</div><div class="sc-desc">Todas las marcas, con garantía de trabajo.</div></div></div>
+      <div class="sc"><div class="sc-img-wrap"><img class="sc-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt=""></div><div class="sc-body"><span class="sc-num">— 03</span><div class="sc-name">Elaboración de Mangueras A/C</div><div class="sc-desc">Fabricación a la medida para cualquier vehículo.</div></div></div>
+      <div class="sc"><div class="sc-img-wrap"><img class="sc-img" src="imagenes/5.jpg" alt=""></div><div class="sc-body"><span class="sc-num">— 04</span><div class="sc-name">Recarga de Gas Refrigerante</div><div class="sc-desc">Recarga profesional con equipos certificados.</div></div></div>
+      <div class="sc"><div class="sc-img-wrap"><img class="sc-img" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=700&q=80" alt=""></div><div class="sc-body"><span class="sc-num">— 05</span><div class="sc-name">Diagnóstico Electrónico</div><div class="sc-desc">Equipos de última generación para detección de fallas.</div></div></div>
+      <div class="sc"><div class="sc-img-wrap"><img class="sc-img" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80" alt=""></div><div class="sc-body"><span class="sc-num">— 06</span><div class="sc-name">A/C para Maquinaria Pesada</div><div class="sc-desc">Industrial, agrícola y maquinaria de construcción.</div></div></div>
+    </div>
+  </section>
+
+  <!-- S3 GALERÍA -->
+  <section class="fp-slide" id="s-gal">
+    <div class="gal-inner">
+      <div><span class="s-lbl" style="text-align:center;display:block">Nuestro trabajo</span><h2 class="s-ttl" style="text-align:center">GALERÍA DEL <em>TALLER</em></h2><div class="s-div" style="margin:10px auto 0"></div></div>
+      <div class="gal-grid">
+        <div class="gi"><img class="gi-img" src="imagenes/2.png" alt=""></div>
+        <div class="gi"><img class="gi-img" src="imagenes/3.png" alt=""></div>
+        <div class="gi"><img class="gi-img" src="imagenes/4.png" alt=""></div>
+        <div class="gi"><img class="gi-img" src="imagenes/uno.png" alt=""></div>
+        <div class="gi"><img class="gi-img" src="imagenes/6.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 NOSOTROS -->
+  <section class="fp-slide" id="s-nos">
+    <div class="nos-l">
+      <img class="nos-l-img" src="imagenes/9.png" alt="Equipo">
+      <div class="nos-badge"><div class="nos-badge-n">10+</div><div class="nos-badge-l">Años en el mercado</div></div>
+    </div>
+    <div class="nos-r">
+      <span class="s-lbl">¿Por qué elegirnos?</span>
+      <h2 class="s-ttl">CALIDAD QUE <em>SE SIENTE</em></h2>
+      <div class="s-div"></div>
+      <div class="feat-list">
+        <div class="feat"><div class="feat-bar"></div><div class="feat-body"><h4>Atención Especializada</h4><p>Personal 100% capacitado en sistemas de A/C automotriz e industrial.</p></div></div>
+        <div class="feat"><div class="feat-bar"></div><div class="feat-body"><h4>Diagnóstico de Alta Precisión</h4><p>Equipos modernos que detectan fallas que otros talleres no logran.</p></div></div>
+        <div class="feat"><div class="feat-bar"></div><div class="feat-body"><h4>Repuestos con Garantía</h4><p>Solo repuestos originales o de primera calidad, siempre garantizados.</p></div></div>
+        <div class="feat"><div class="feat-bar"></div><div class="feat-body"><h4>Livianos, Pesados e Industrial</h4><p>Autos, camionetas, buses, tractores y maquinaria pesada.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 TESTIMONIOS -->
+  <section class="fp-slide" id="s-test">
+    <div class="test-top">
+      <div><span class="s-lbl">Lo que dicen en Google</span><h2 class="s-ttl">TESTIMONIOS <em>REALES</em></h2><div class="s-div"></div></div>
+      <div><div class="tr-score">4.5</div><div class="tr-stars">★★★★★</div><div class="tr-lbl">Google Reviews</div></div>
+    </div>
+    <div class="test-viewport">
+      <div class="test-track" id="testTrack">
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#4285f4">J</div><div class="tc-info"><div class="tc-name">Johan Chavez</div><div class="tc-meta">1 reseña</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Excelente servicio, muy buena atención, rápido y preciso. Precios justos."</p><div class="tc-date">Hace 2 años</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#34a853">P</div><div class="tc-info"><div class="tc-name">Pablo Escobar</div><div class="tc-meta">Local Guide · 121 reseñas</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Rápida y eficiente atención, excelentes precios comparados a la competencia. Muy recomendable."</p><div class="tc-date">Hace 3 años · Local Guide</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#ea4335">G</div><div class="tc-info"><div class="tc-name">GRUPO COLMAN</div><div class="tc-meta">Local Guide · 25 reseñas</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Recomendado 100%. Precio justo y diagnóstico responsable."</p><div class="tc-date">Hace 2 años · Local Guide</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#f59e0b;color:#222">J</div><div class="tc-info"><div class="tc-name">Juan Zaldumbide</div><div class="tc-meta">Local Guide · 57 reseñas</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Muy buena atención."</p><div class="tc-date">Hace 5 años · Local Guide</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#8b5cf6">E</div><div class="tc-info"><div class="tc-name">Elluz Nayreth Carrillo</div><div class="tc-meta">5 reseñas</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Excelente servicio."</p><div class="tc-date">Hace 5 años</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#f59e0b">W</div><div class="tc-info"><div class="tc-name">Willians Saigua</div><div class="tc-meta">17 reseñas · 4 fotos</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Excelente.. Muy profesionales."</p><div class="tc-date">Hace 4 años</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#10b981">J</div><div class="tc-info"><div class="tc-name">Jose Luna</div><div class="tc-meta">Local Guide · 21 reseñas</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Seriedad, profesionalismo y honradez."</p><div class="tc-date">Hace 4 años · Local Guide</div></div>
+
+        <div class="tc"><div class="tc-head"><div class="tc-av" style="background:#0ea5e9">L</div><div class="tc-info"><div class="tc-name">La Antojeria</div><div class="tc-meta">1 reseña</div></div><svg class="tc-goog" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tc-stars"><span>★★★★★</span></div><p class="tc-text">"Buen precio y atención."</p><div class="tc-date">Hace 5 años</div></div>
+
+      </div>
+    </div>
+    <div class="test-progress"><div class="test-progress-bar" id="progressBar"></div></div>
+  </section>
+
+  <!-- S6 STATS -->
+  <section class="fp-slide" id="s-stats">
+    <div class="stat-col"><div class="stat-n">10<sup>+</sup></div><div class="stat-l">Años de experiencia</div></div>
+    <div class="stat-col"><div class="stat-n">500<sup>+</sup></div><div class="stat-l">Vehículos reparados</div></div>
+    <div class="stat-col"><div class="stat-n">15<sup>+</sup></div><div class="stat-l">Marcas atendidas</div></div>
+    <div class="stat-col"><div class="stat-n">100<sup>%</sup></div><div class="stat-l">Garantía en trabajos</div></div>
+  </section>
+
+  <!-- S7 UBICACIÓN -->
+  <section class="fp-slide" id="s-ubic">
+    <div class="ubic-l">
+      <span class="s-lbl">Encuéntranos</span>
+      <h2 class="s-ttl">NUESTRA <em>UBICACIÓN</em></h2>
+      <div class="s-div"></div>
+      <div class="ubic-items">
+        <div class="ui"><div class="ui-dot"></div><div><h4>Dirección</h4><p>Puembo, Pichincha, Ecuador</p></div></div>
+        <div class="ui"><div class="ui-dot"></div><div><h4>Horario</h4><p>Lun – Vie: 8:00 am – 6:00 pm<br>Sábado: 8:00 am – 1:00 pm</p></div></div>
+        <div class="ui"><div class="ui-dot"></div><div><h4>WhatsApp / Teléfono</h4><p>0958 622 828</p></div></div>
+        <div class="ui"><div class="ui-dot"></div><div><h4>Correo</h4><p>info@friomotriz.com</p></div></div>
+      </div>
+      <a class="btn-maps" href="https://maps.app.goo.gl/5YXrUxRU1CZSNaQo8" target="_blank">
+        <i class="fa-solid fa-location-dot"></i> Abrir en Google Maps
+      </a>
+    </div>
+    <div class="ubic-r">
+      <iframe class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.793814691593!2d-78.3671122!3d-0.2008142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d593f9dcba9fc3%3A0x90ffa3cefc5bcdcd!2sFRIO%20MOTRIZ!5e0!3m2!1ses!2sec!4v1777151505003!5m2!1ses!2sec"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- S8 CONTACTO -->
+  <section class="fp-slide" id="s-ct">
+    <div class="ct-l">
+      <span class="s-lbl">Hablemos</span>
+      <h2 class="s-ttl">AGENDA TU <em>CITA HOY</em></h2>
+      <div class="s-div"></div>
+      <div class="ct-details">
+        <div class="cd"><div class="cd-dot"></div><div><h4>WhatsApp</h4><p>0958 622 828</p></div></div>
+        <div class="cd"><div class="cd-dot"></div><div><h4>Horario</h4><p>Lun–Vie 8am–6pm · Sáb 8am–1pm</p></div></div>
+        <div class="cd"><div class="cd-dot"></div><div><h4>Correo</h4><p>info@friomotriz.com</p></div></div>
+      </div>
+      <a class="btn-wa-ct" href="https://wa.me/593958622828" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Escríbenos por WhatsApp
+      </a>
+    </div>
+    <div class="ct-r">
+      <div class="cf-ttl">ENVÍANOS UN MENSAJE</div>
+      <div class="cf-row">
+        <div class="cf-g"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+        <div class="cf-g"><label>Teléfono</label><input type="tel" placeholder="09XXXXXXXX"></div>
+      </div>
+      <div class="cf-g"><label>Servicio</label><select><option>Selecciona un servicio</option><option>Recarga de Gas</option><option>Diagnóstico</option><option>Reparación de Compresores</option><option>Mangueras A/C</option><option>Soldadura Aluminio</option><option>A/C Maquinaria</option><option>Otro</option></select></div>
+      <div class="cf-g"><label>Mensaje</label><textarea rows="3" placeholder="Cuéntanos sobre tu vehículo..."></textarea></div>
+      <button class="btn-send">Enviar Mensaje</button>
+    </div>
+  </section>
+
+  <!-- S9 FOOTER -->
+  <section id="s-footer">
+    <div class="ft-logo">
+      <div class="logo-bars"><span></span><span></span><span></span><span></span></div>
+      <div class="logo-words"><span class="l1">FRÍO</span><span class="l2"> MOTRIZ</span><span class="l3">Aire Acondicionado Automotriz</span></div>
+    </div>
+    <p class="ft-tag">Especialistas en sistemas de aire acondicionado automotriz e industrial.<br>Puembo, Pichincha, Ecuador.</p>
+    <div class="ft-links">
+      <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="https://wa.me/593958622828" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://maps.app.goo.gl/5YXrUxRU1CZSNaQo8" target="_blank"><i class="fa-solid fa-location-dot"></i> Ubicación</a>
+    </div>
+    <p class="ft-copy">© 2026 Frío Motriz · Todos los derechos reservados · Puembo, Ecuador</p>
+  </section>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
