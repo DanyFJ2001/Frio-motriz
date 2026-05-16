@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.friomotriz.com/sitemap.xml
+
+# Bloquear archivos innecesarios
+Disallow: /node_modules/
+Disallow: /*.json$
