@@ -484,6 +484,7 @@
 
   /* COMPRESOR scroll texts */
   (function(){
+    if(!document.querySelector('#compresor')) return;
     const ids=['st1','st2','st3','st4'],thr=[.08,.32,.58,.82];
     ScrollTrigger.create({
       trigger:'#compresor',
@@ -495,6 +496,7 @@
       onUpdate(self){
         ids.forEach((id,i)=>{
           const el=document.getElementById(id);
+          if(!el) return;
           const on=self.progress>=thr[i]&&self.progress<(thr[i+1]||1);
           el.style.opacity=on?'1':'0';
         });
@@ -624,7 +626,7 @@
       requestAnimationFrame(draw);
     })();
     const wrap=document.getElementById('snowCta');
-    for(let i=0;i<60;i++){const f=document.createElement('div');f.className='sf';const s=Math.random()*4+1.5;f.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;border-radius:50%;background:#05226e;animation-duration:${Math.random()*10+6}s;animation-delay:${Math.random()*10}s;`;wrap.appendChild(f);}
+    for(let i=0;i<60;i++){const f=document.createElement('div');f.className='sf';const s=Math.random()*4+1.5;const dur=(Math.random()*10+6).toFixed(2),del=(Math.random()*12).toFixed(2);f.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;border-radius:50%;background:#05226e;animation:sffall ${dur}s linear ${del}s infinite;`;wrap.appendChild(f);}
   })();
 
   /* Reveal animations */

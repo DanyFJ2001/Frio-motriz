@@ -442,7 +442,7 @@
 
   /* snow */
   .snow-wrap { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
-  .sf { position: absolute; border-radius: 50%; animation: sffall linear infinite; opacity: 0; }
+  .sf { position: absolute; border-radius: 50%; opacity: 0; }
   @keyframes sffall { 0%{opacity:0;transform:translateY(-30px)} 10%{opacity:.8} 85%{opacity:.3} 100%{opacity:0;transform:translateY(110vh)} }
 
   /* RESPONSIVE */
