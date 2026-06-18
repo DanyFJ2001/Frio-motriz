@@ -468,4 +468,22 @@
     width: max-content !important; /* El contenedor medirá lo que midan todas las tarjetas juntas */
     will-change: transform; /* Optimiza el rendimiento en GSAP */
 }
-  
+  .brands-sec { background:#fff; padding:52px 0 60px; border-top:1px solid #e8eef4; border-bottom:1px solid #e8eef4; overflow:hidden; }
+.brands-hd { text-align:center; margin-bottom: 1.8rem; padding: 0 24px; }
+.brands-ey { display:block; font-size:.62rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#2563eb; margin-bottom:.5rem; }
+.brands-ttl { font-family:'Sora',sans-serif; font-size:clamp(1.2rem,2.2vw,1.7rem); font-weight:700; letter-spacing:-.4px; color:#0d1f3c; }
+.brands-fade {
+  position: relative; overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.brands-track { display:flex; align-items:center; white-space:nowrap; animation:brandsSlide 32s linear infinite; will-change:transform; }
+.brands-fade:hover .brands-track { animation-play-state: paused; }
+@keyframes brandsSlide { to { transform: translateX(-50%); } }
+.brand-name {
+  font-family:'Sora',sans-serif; font-size:clamp(1.25rem,2vw,1.65rem); font-weight:700;
+  letter-spacing:-.3px; color:#1e3a5f; opacity:.82; padding:0 2.4rem;
+  transition: color .3s, opacity .3s; cursor:default;
+}
+.brand-name:hover { color:#2563eb; opacity:1; }
+.brand-dot { width:5px; height:5px; border-radius:50%; background:#cdd9e8; flex-shrink:0; }
