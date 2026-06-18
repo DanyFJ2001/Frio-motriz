@@ -224,9 +224,9 @@
     color: rgba(255,255,255,.02); line-height: 1; user-select: none; pointer-events: none;
   }
   .sp-tag {
-    display: inline-block; font-size: .56rem; letter-spacing: 3px; color: var(--blue);
-    text-transform: uppercase; border: 1px solid rgba(0,191,255,.22); padding: 4px 12px;
-    border-radius: 2px; margin-bottom: 1.2rem; background: rgba(0,191,255,.03);
+    display: inline-block; font-size: .56rem; letter-spacing: 3px; color: #ffffff;
+    text-transform: uppercase; border: 1px solid rgba(255,255,255,.22); padding: 4px 12px;
+    border-radius: 2px; margin-bottom: 1.2rem; background: rgba(255,255,255,.06);
   }
   .sp-line { width: 60px; height: 1px; background: linear-gradient(90deg, var(--blue), transparent); margin-bottom: 1.2rem; }
   .sp-title {
@@ -349,7 +349,10 @@
   .g-logo { font-family: 'Sora', sans-serif; font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; }
   .g-badge-txt { font-size: .72rem; color: var(--dlight); line-height: 1.4; }
   .rv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.25rem; position: relative; z-index: 2; }
-  .rv-grid.rv-carousel { display: flex; flex-wrap: nowrap; align-items: stretch; gap: 1.25rem; overflow: hidden; width: 100%; }
+  #reviews { overflow: hidden; }
+  .rv-grid.rv-carousel { display: flex; flex-wrap: nowrap; align-items: stretch; gap: 1.25rem; width: max-content; animation: rvScroll 32s linear infinite; }
+  .rv-grid.rv-carousel:hover { animation-play-state: paused; }
+  @keyframes rvScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .rv-card { background: #fff; border: 1px solid rgba(37,99,235,.1); border-radius: 8px; padding: 1.75rem; transition: transform .4s, box-shadow .4s; cursor: default; min-width: 320px; flex: 0 0 320px; }
   .rv-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,100,200,.08); }
   @media (max-width: 900px) {
@@ -480,10 +483,16 @@
 .brands-track { display:flex; align-items:center; white-space:nowrap; animation:brandsSlide 32s linear infinite; will-change:transform; }
 .brands-fade:hover .brands-track { animation-play-state: paused; }
 @keyframes brandsSlide { to { transform: translateX(-50%); } }
-.brand-name {
-  font-family:'Sora',sans-serif; font-size:clamp(1.25rem,2vw,1.65rem); font-weight:700;
-  letter-spacing:-.3px; color:#1e3a5f; opacity:.82; padding:0 2.4rem;
-  transition: color .3s, opacity .3s; cursor:default;
+.brand-img {
+  height: 80px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: .75;
+  flex-shrink: 0;
+  margin: 0 3rem;
+  filter: grayscale(30%);
+  transition: opacity .3s, filter .3s;
+  display: block;
 }
-.brand-name:hover { color:#2563eb; opacity:1; }
-.brand-dot { width:5px; height:5px; border-radius:50%; background:#cdd9e8; flex-shrink:0; }
+.brand-img:hover { opacity: 1; filter: grayscale(0%); }

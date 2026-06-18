@@ -161,21 +161,19 @@
     </div>
     <div class="brands-fade">
       <div class="brands-track">
-        <span class="brand-name">Fatosla</span><span class="brand-dot"></span>
-        <span class="brand-name">Sudinco</span><span class="brand-dot"></span>
-        <span class="brand-name">Motor Sport</span><span class="brand-dot"></span>
-        <span class="brand-name">Macro Motors</span><span class="brand-dot"></span>
-        <span class="brand-name">Suncar</span><span class="brand-dot"></span>
-        <span class="brand-name">AutoK</span><span class="brand-dot"></span>
-        <span class="brand-name">Dinámica Competición</span><span class="brand-dot"></span>
+        <img class="brand-img" src="logos/1.png" alt="Marca 1">
+        <img class="brand-img" src="logos/2.jpg" alt="Marca 2">
+        <img class="brand-img" src="logos/3.png" alt="Marca 3">
+        <img class="brand-img" src="logos/4.png" alt="Marca 4">
+        <img class="brand-img" src="logos/5.jpg" alt="Marca 5">
+        <img class="brand-img" src="logos/6.jpg" alt="Marca 6">
         <!-- duplicado exacto para el loop infinito -->
-        <span class="brand-name">Fatosla</span><span class="brand-dot"></span>
-        <span class="brand-name">Sudinco</span><span class="brand-dot"></span>
-        <span class="brand-name">Motor Sport</span><span class="brand-dot"></span>
-        <span class="brand-name">Macro Motors</span><span class="brand-dot"></span>
-        <span class="brand-name">Suncar</span><span class="brand-dot"></span>
-        <span class="brand-name">AutoK</span><span class="brand-dot"></span>
-        <span class="brand-name">Dinámica Competición</span><span class="brand-dot"></span>
+        <img class="brand-img" src="logos/1.png" alt="Marca 1">
+        <img class="brand-img" src="logos/2.jpg" alt="Marca 2">
+        <img class="brand-img" src="logos/3.png" alt="Marca 3">
+        <img class="brand-img" src="logos/4.png" alt="Marca 4">
+        <img class="brand-img" src="logos/5.jpg" alt="Marca 5">
+        <img class="brand-img" src="logos/6.jpg" alt="Marca 6">
       </div>
     </div>
   </section>
@@ -550,19 +548,13 @@
   (function(){
     const reviews = document.getElementById('reviews');
     const grid = reviews.querySelector('.rv-grid');
-    let reviewTween = null;
     let clones = [];
-    
 
     function createCarousel(){
       if(window.innerWidth <= 900 || grid.dataset.carousel === 'on') return;
 
       const items = Array.from(grid.children).filter(el => !el.classList.contains('rv-card-clone'));
-      if (items.length === 0) return;
-
-      // Activar flex layout antes de clonar y medir
-      grid.classList.add('rv-carousel');
-      grid.style.width = 'max-content';
+      if(items.length === 0) return;
 
       items.forEach(item => {
         const clone = item.cloneNode(true);
@@ -571,47 +563,28 @@
         clones.push(clone);
       });
 
-      // El browser calcula la posición exacta del primer clon — sin aritmética manual
-      const loopDistance = clones[0].offsetLeft;
-
-      reviewTween = gsap.fromTo(grid,
-        { x: 0 },
-        { x: -loopDistance, duration: 30, ease: 'none', repeat: -1 }
-      );
-
+      grid.classList.add('rv-carousel');
       grid.dataset.carousel = 'on';
     }
 
     function destroyCarousel(){
       if(grid.dataset.carousel !== 'on') return;
-      if(reviewTween){ reviewTween.kill(); reviewTween = null; }
       clones.forEach(clone => clone.remove());
       clones = [];
       grid.classList.remove('rv-carousel');
       grid.style.transform = '';
-      grid.style.width = '';
       delete grid.dataset.carousel;
     }
 
-    // Un debounce o timeout evita parpadeos innecesarios al redimensionar bruscamente
     let resizeTimeout;
-    function resizeHandler(){
+    window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        destroyCarousel();
-        createCarousel();
-      }, 100);
-    }
+      resizeTimeout = setTimeout(() => { destroyCarousel(); createCarousel(); }, 150);
+    });
 
-    // Usar DOMContentLoaded o asegurar que los estilos ya cargaron para leer bien los offsets
-    if (document.readyState === 'complete') {
-      createCarousel();
-    } else {
-      window.addEventListener('load', createCarousel);
-    }
-    
-    window.addEventListener('resize', resizeHandler);
-})();
+    if(document.readyState === 'complete') createCarousel();
+    else window.addEventListener('load', createCarousel);
+  })();
   /* CTA canvas */
   (function(){
     const cv=document.getElementById('cvs-cta'),ctx=cv.getContext('2d');
