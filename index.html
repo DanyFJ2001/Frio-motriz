@@ -470,7 +470,7 @@
 
   /* COMPRESOR canvas (partículas azules sobre blanco) */
   (function(){
-    const cv=document.getElementById('cvs-comp'),ctx=cv.getContext('2d');
+    const cv=document.getElementById('cvs-comp');if(!cv)return;const ctx=cv.getContext('2d');
     let W,H,pts=[];
     function resize(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}
     resize();window.addEventListener('resize',resize);
@@ -619,12 +619,12 @@
     for(let i=0;i<130;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.2,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,alpha:Math.random()*.3+.04,pulse:Math.random()*Math.PI*2,spd:Math.random()*.012+.004});
     (function draw(){
       ctx.clearRect(0,0,W,H);
-      const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,W*.55);g.addColorStop(0,'rgba(0,191,255,0.04)');g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-      pts.forEach(p=>{p.pulse+=p.spd;p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;const a=p.alpha*(.5+.5*Math.sin(p.pulse));ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,191,255,${a})`;ctx.fill();});
+      const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,W*.55);g.addColorStop(0,'rgba(5,34,110,0.04)');g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+      pts.forEach(p=>{p.pulse+=p.spd;p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;const a=p.alpha*(.5+.5*Math.sin(p.pulse));ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(5,34,110,${a})`;ctx.fill();});
       requestAnimationFrame(draw);
     })();
     const wrap=document.getElementById('snowCta');
-    for(let i=0;i<60;i++){const f=document.createElement('div');f.className='sf';const s=Math.random()*2.5+.8;f.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;border-radius:50%;background:rgba(255,255,255,0.7);animation-duration:${Math.random()*10+6}s;animation-delay:${Math.random()*10}s;`;wrap.appendChild(f);}
+    for(let i=0;i<60;i++){const f=document.createElement('div');f.className='sf';const s=Math.random()*4+1.5;f.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;border-radius:50%;background:#05226e;animation-duration:${Math.random()*10+6}s;animation-delay:${Math.random()*10}s;`;wrap.appendChild(f);}
   })();
 
   /* Reveal animations */

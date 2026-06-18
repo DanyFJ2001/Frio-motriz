@@ -16,7 +16,7 @@
   /* ─── VARIABLES GLOBALES ─── */
   :root {
     --dark:#050816; --dark2:#071120; --dark3:#0b1220;
-    --blue:#00bfff; --blue2:#38bdf8; --blue3:#2563eb;
+    --blue:#05226e; --blue2:#38bdf8; --blue3:#2563eb;
     --navy:#0d1f35;
     --ice:#e0f4ff; --frost:#f0f9ff;
     --white:#ffffff;
@@ -234,7 +234,7 @@
     font-weight: 700; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -.5px;
     color: var(--txt);
   }
-  .sp-title em { color: var(--blue2); font-style: normal; }
+  .sp-title em { color: #ffffff; font-style: normal; }
   .sp-desc { font-size: .82rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; max-width: 400px; }
   .sp-feats { display: flex; flex-direction: column; gap: .4rem; }
   .sp-feat { display: flex; align-items: center; gap: .65rem; font-size: .75rem; color: var(--muted); }
@@ -414,15 +414,15 @@
   /* ══════════════════════════════════════
      CTA FINAL
   ══════════════════════════════════════ */
-  #cta { position: relative; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--dark); overflow: hidden; text-align: center; }
+  #cta { position: relative; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #ffffff; overflow: hidden; text-align: center; }
   #cvs-cta { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .cta-gd { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,191,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,191,255,.025) 1px, transparent 1px); background-size: 60px 60px; }
-  .cta-glow2 { position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(0,191,255,.055) 0%, transparent 65%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+  .cta-gd { display: none; }
+  .cta-glow2 { position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(5,34,110,.04) 0%, transparent 65%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
   .cta-content { position: relative; z-index: 2; padding: 0 4vw; }
-  .cta-ey { font-size: .54rem; letter-spacing: 5px; text-transform: uppercase; color: var(--blue); margin-bottom: 2.5rem; opacity: .55; }
+  .cta-ey { font-size: .85rem; letter-spacing: 4px; text-transform: uppercase; color: var(--blue); margin-bottom: 2.5rem; opacity: .7; }
   .cta-big { font-family: 'Sora', sans-serif; font-size: clamp(2rem,7vw,7.5rem); font-weight: 800; line-height: .9; letter-spacing: -3px; text-transform: uppercase; margin-bottom: 2rem; }
-  .cta-l1 { display: block; color: #fff; }
-  .cta-l2 { display: block; color: var(--blue2); }
+  .cta-l1 { display: block; color: #0d1f3c; }
+  .cta-l2 { display: block; color: #05226e; }
   .cta-sub { font-size: clamp(.8rem,1.4vw,1rem); color: var(--muted); margin-bottom: 3rem; letter-spacing: .3px; }
   .btn-cta2 {
     display: inline-flex; align-items: center; gap: .75rem;
@@ -437,8 +437,8 @@
   .cc { display: flex; flex-direction: column; gap: .25rem; align-items: center; }
   .cc-l { font-size: .48rem; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); opacity: .55; }
   .cc-v { font-size: .82rem; color: var(--muted); }
-  .cta-foot { position: absolute; bottom: 2rem; left: 0; right: 0; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 2rem; font-size: .5rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(148,163,184,.2); font-family: 'Space Grotesk', sans-serif; }
-  .cta-foot::before,.cta-foot::after { content: ''; display: block; flex: 1; height: 1px; background: rgba(0,191,255,.06); max-width: 200px; }
+  .cta-foot { position: absolute; bottom: 2rem; left: 0; right: 0; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 2rem; font-size: .5rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(13,31,60,.4); font-family: 'Space Grotesk', sans-serif; }
+  .cta-foot::before,.cta-foot::after { content: ''; display: block; flex: 1; height: 1px; background: rgba(5,34,110,.15); max-width: 200px; }
 
   /* snow */
   .snow-wrap { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
